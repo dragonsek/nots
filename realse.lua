@@ -12,7 +12,7 @@ end
 
 local rayfieldLibrary = fetchLibrary("https://sirius.menu/rayfield")
 if rayfieldLibrary then
-    loadstring(rayfieldLibrary)()
+    assert(load(exploitScript))()
 else
     warn("Rayfield library failed to load.")
 end
@@ -31,7 +31,7 @@ end
 
 local exploitScript = fetchExploit("https://example.com/path/to/your/exploit.lua")
 if exploitScript then
-    loadstring(exploitScript)()
+    assert(load(exploitScript))()
 else
     warn("Exploit script failed to load.")
 end
