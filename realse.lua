@@ -20,7 +20,7 @@ local rayfieldLibrary = fetchLibrary("https://sirius.menu/rayfield")
 if rayfieldLibrary then
     exploitScript = fetchLibrary("https://raw.githubusercontent.com/dragonsek/nots/refs/heads/main/sc.lua")
     if exploitScript then
-        assert(load(exploitScript))()
+        loadfile(rayfieldLibrary)()
     else
         warn("Exploit script failed to load.")
     end
