@@ -20,7 +20,23 @@ local rayfieldLibrary = fetchLibrary("https://sirius.menu/rayfield")
 if rayfieldLibrary then
     exploitScript = fetchLibrary("https://raw.githubusercontent.com/dragonsek/nots/refs/heads/main/sc.lua")
     if exploitScript then
-        loadfile(rayfieldLibrary)()
+        loadstring(rayfieldLibrary)()
+        local rayfield = Rayfield:CreateWindow({
+            Name = "Rayfield",
+            LoadingTitle = "Loading...",
+            LoadingSubtitle = "Please wait",
+            ConfigurationSaving = {
+                Enabled = true,
+                FolderName = "Rayfield",
+                FileName = "Settings"
+            },
+            Discord = {
+                Enabled = true,
+                InviteCode = "sirius",
+                RememberJoins = true
+            },
+            KeySystem = false,
+        })
     else
         warn("Exploit script failed to load.")
     end
