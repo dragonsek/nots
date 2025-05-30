@@ -12,7 +12,7 @@ end
 
 local rayfieldLibrary = fetchLibrary("https://sirius.menu/rayfield")
 if rayfieldLibrary then
-    assert(load(exploitScript))()
+    loadstring(rayfieldLibrary)()
 else
     warn("Rayfield library failed to load.")
 end
